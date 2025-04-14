@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAscending = true;
 
     sortBtn.addEventListener('mouseover', () => {
-        sortBtn.src = '/sortfromtoptobottomhover.png'; 
+        sortBtn.src = '/sortfromtoptobottomhover.png';
     });
 
     sortBtn.addEventListener('mouseout', () => {
-        sortBtn.src = '/sortfromtoptobottom.png'; 
+        sortBtn.src = '/sortfromtoptobottom.png';
     });
 
     addBtn.addEventListener('click', () => {
@@ -35,21 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     todoList.addEventListener('click', (e) => {
         if (e.target.classList.contains('delete-btn')) {
             const li = e.target.parentElement;
-            const allItems = todoList.getElementsByTagName('li');
             const input = li.querySelector('.todo-input');
-            const taskText = input ? input.value.trim() : '';
 
-            if (input && taskText === '') {
-                return; 
+            // Əgər input varsa, sadəcə içini təmizlə
+            if (input) {
+                input.value = '';
+                return;
             }
 
-            if (allItems.length === 1) {
-                if (input) {
-                    input.value = '';
-                }
-            } else {
-                li.remove();
-            }
+            // Əgər tamamlanmış task-dırsa (yəni input yoxdursa), li-ni sil
+            li.remove();
         }
     });
 
