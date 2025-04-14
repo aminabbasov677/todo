@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = e.target.parentElement;
             const input = li.querySelector('.todo-input');
 
-            // Əgər input varsa, sadəcə içini təmizlə
+           
             if (input) {
                 input.value = '';
                 return;
             }
 
-            // Əgər tamamlanmış task-dırsa (yəni input yoxdursa), li-ni sil
+           
             li.remove();
         }
     });
