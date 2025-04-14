@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAscending = true;
 
     sortBtn.addEventListener('mouseover', () => {
-        sortBtn.src = '/sortfromtoptobottomhover.png'; // Hover zamanı yeni ikon
+        sortBtn.src = '/sortfromtoptobottomhover.png'; 
     });
 
     sortBtn.addEventListener('mouseout', () => {
-        sortBtn.src = '/sortfromtoptobottom.png'; // Normal vəziyyətdəki ikon
+        sortBtn.src = '/sortfromtoptobottom.png'; 
     });
 
     addBtn.addEventListener('click', () => {
